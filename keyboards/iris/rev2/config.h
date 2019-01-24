@@ -25,16 +25,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0200
 #define MANUFACTURER    Keebio
 #define PRODUCT         Iris Keyboard
-#define DESCRIPTION     Split 50 percent ergonomic keyboard
+#define DESCRIPTION     Split 40 percent ergonomic keyboard
 
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS 10
-#define MATRIX_COLS 6
+#define MATRIX_COLS 5
 
 // wiring of each half
-#define MATRIX_ROW_PINS { D7, E6, B4, D2, D4 }
-#define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6 }
+//#define MATRIX_ROW_PINS { D7, E6, B4, D2, D4 }
+//#define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6 }
+#define MATRIX_COL_PINS { D4, B4, E6, D7, C6 }
+#define MATRIX_ROW_PINS { F7, B1, B3, B2, B6 }
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
