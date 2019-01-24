@@ -14,38 +14,50 @@ enum custom_keycodes {
   /* ADJUST, */
 };
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT(
               KC_Q,    KC_W,     KC_E,    KC_R,      KC_T,              KC_Y,     KC_U,     KC_I,                 KC_O,    KC_P,
               KC_A,    KC_S,     KC_D,    KC_F,      KC_G,              KC_H,     KC_J,     KC_K,                 KC_L,    KC_SCLN,
               KC_Z,    KC_X,     KC_C,    KC_V,      KC_B,              KC_N,     KC_M,     KC_COMM,              KC_DOT,  KC_SLSH,
-              DF(1),   DF(2),    KC_SPC,  KC_LALT,   KC_LCTRL,          KC_ENTER, KC_ENTER, LT(1,KC_BSPACE),            KC_LEFT, KC_RIGHT,
-              KC_NO,  KC_NO,     KC_NO,   KC_LSHIFT, KC_LGUI,           KC_ESC,   KC_TAB,   KC_NO,                KC_NO,   KC_NO
+              DF(1),   DF(16),    KC_SPC,  KC_TAB,    KC_LCTRL,          LM(1,MOD_LSFT), KC_ENTER, LT(1,KC_BSPACE),      KC_LEFT, KC_RIGHT,
+                                          KC_LSHIFT, KC_LGUI,           KC_GESC,   KC_LALT 
 
   ),
   [1] = LAYOUT(
-              KC_NO,   KC_1,     KC_2,    KC_3,   KC_MINUS,          KC_PGUP,    KC_HOME,   KC_UP,    KC_END,    KC_NO,
-              KC_NO,   KC_4,     KC_5,    KC_6,   KC_PSLS,           KC_PGDOWN,    KC_LEFT, KC_DOWN,  KC_RIGHT, KC_NO,
-              KC_NO,   KC_7,     KC_8,    KC_9,      KC_0,             KC_NO,    KC_NO,   KC_NO,    KC_NO,    KC_NO,
-              DF(2),   DF(0), KC_SPC,  KC_LALT,   KC_LCTRL,          KC_ENTER, KC_2,    KC_BSPACE, KC_LEFT, KC_RIGHT,
-              KC_NO,   KC_NO,   KC_NO,   KC_LSHIFT, KC_LGUI,           KC_TAB,   KC_7,    KC_NO,     KC_NO,   KC_NO
+              KC_NO,     KC_1,     KC_2,    KC_3,      KC_MINUS,           KC_PGUP,    KC_HOME,   KC_UP,    KC_END,    KC_NO,
+              KC_NO,     KC_4,     KC_5,    KC_6,      KC_EQL,             KC_PGDOWN,  KC_LEFT,   KC_DOWN,  KC_RIGHT,  KC_NO,
+              KC_RBRC,   KC_7,     KC_8,    KC_9,      KC_0,               KC_LBRC,    KC_RBRC,   KC_BSLS,  KC_QUOT,   KC_NO,
+              DF(2),     DF(0),    KC_SPC,  KC_TAB,    KC_LCTRL,           LM(1,MOD_LSFT), KC_ENTER, LT(1,KC_BSPACE),      KC_LEFT, KC_RIGHT,
+                                          KC_LSHIFT,   KC_LGUI,            KC_GESC,   KC_LALT 
   ),
   [2] = LAYOUT(
        KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
        KC_TILD,   KC_NO, KC_NO,   KC_NO,  KC_NO,        KC_NO,   KC_NO,   KC_LBRC, KC_RBRC, KC_BSLASH,
        KC_NO,   KC_NO, KC_NO,   KC_NO,  KC_NO,        KC_NO,   KC_NO,   KC_NO,   KC_SCLN, KC_QUOTE,
-       DF(16),   DF(1),  KC_SPC,  KC_LALT,   KC_LCTRL,          KC_ENTER, KC_ENTER, KC_BSPACE,            KC_LEFT, KC_RIGHT,
-       KC_NO,  KC_GRAVE, KC_NO,   KC_LSHIFT, KC_LGUI,           KC_ESC,   KC_TAB,   KC_NO,                KC_NO,   KC_NO
+       DF(3),   DF(1),    KC_SPC,  KC_TAB,    KC_LCTRL,          LM(1,MOD_LSFT), KC_ENTER, LT(1,KC_BSPACE),      KC_LEFT, KC_RIGHT,
+                                          KC_LSHIFT, KC_LGUI,           KC_GESC,   KC_LALT 
   ),
+
+
+
+  [3] = LAYOUT(
+	KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+	KC_NUHS, KC_SCLN, KC_COMM, KC_DOT, KC_QUOT,    
+	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+	KC_SLSH, KC_NUBS, KC_NO, KC_NO, KC_NO,         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+  DF(16),   DF(2),    KC_SPC,  KC_TAB,    KC_LCTRL,          LM(1,MOD_LSFT), KC_ENTER, LT(1,KC_BSPACE),      KC_LEFT, KC_RIGHT,
+                                          KC_LSHIFT, KC_LGUI,           KC_GESC,   KC_LALT 
+	),
 
 
   [16] = LAYOUT(
        RESET, KC_AT, KC_HASH, KC_DLR, KC_PERC,      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
        KC_NO,   KC_NO, KC_NO,   KC_NO,  KC_NO,        KC_NO,   KC_NO,   KC_LBRC, KC_RBRC, KC_BSLASH,
        KC_NO,   KC_NO, KC_NO,   KC_NO,  KC_NO,        KC_NO,   KC_NO,   KC_NO,   KC_SCLN, KC_QUOTE,
-       DF(0),   DF(2),  KC_SPC,  KC_LALT,   KC_LCTRL,          KC_ENTER, KC_ENTER, KC_BSPACE,            KC_LEFT, KC_RIGHT,
-       KC_NO,  KC_GRAVE, KC_NO,   KC_LSHIFT, KC_LGUI,           KC_ESC,   KC_TAB,   KC_NO,                KC_NO,   KC_NO
+       DF(0),   DF(3),    KC_SPC,  KC_TAB,    KC_LCTRL,          LM(1,MOD_LSFT), KC_ENTER, LT(1,KC_BSPACE),      KC_LEFT, KC_RIGHT,
+                                          KC_LSHIFT, KC_LGUI,           KC_GESC,   KC_LALT 
   ),
 
   /* //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐ */
