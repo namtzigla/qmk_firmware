@@ -23,7 +23,7 @@ enum custom_keycodes {
     L11, L12, L13, L14, L15,                                                            R11, R12, R13, R14, R15, \
     L21, L22, L23, L24, L25,                                                            R21, R22, R23, R24, R25, \
     L31, L32, L33, L34, L35,                                                            R31, R32, R33, R34, R35, \
-    DF((n==MAX_LAYER?0:n+1)), DF((n==0?MAX_LAYER:n-1)), KC_SPC,  KC_TAB, KC_GESC,       KC_LCTRL,  LT(1,KC_ENTER), LT(1,KC_BSPACE), KC_QUOTE,  KC_BSLS, \
+    DF((n==MAX_LAYER?0:n+1)), DF((n==0?MAX_LAYER:n-1)), KC_SPC,  KC_TAB, KC_LCTRL,      KC_ENTER,  LT3,KC_ENTER), LT(1,KC_BSPACE), KC_QUOTE,  KC_BSLS, \
                                                         OSM(MOD_LSFT),   KC_LGUI,       KC_GESC,   KC_LALT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
